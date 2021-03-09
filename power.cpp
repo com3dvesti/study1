@@ -20,19 +20,25 @@ public:
                 x_pow_p=1;
                 cout << x_pow_p<<"\n";
                 return x_pow_p;
-       } else {
+       } else if(p>0) {
             for(int i=1;i<p;i++){  
                 x_pow_p*=xi;
             }  
           cout << x_pow_p;
           return x_pow_p;
+         }else if(p<0){
+             for(int i=1;i<p;i++){  
+                x_pow_p*=xi;
+            }  
+          cout << (1/x_pow_p);
+          return (1/x_pow_p);
          }
     } 
 };
     
 int main(){
 	    Power Be;
-    Be.set(2,10);
+    Be.set(2,-2);
     Be.calculate();
 	return 0;
 }
