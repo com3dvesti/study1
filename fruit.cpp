@@ -18,7 +18,7 @@ public:
 class Apple : public Fruit{ 
 public: 
     Apple(string c):Fruit(name,c){ 
-        Fruit::name = "Apple";
+        name = "Apple";
     } 
 };
 class Banana : public Fruit{
