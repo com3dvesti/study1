@@ -18,7 +18,7 @@ public:
 class Apple : public Fruit{ 
 public: 
     Apple(string c):Fruit(name,c){ 
-        name = "Apple";
+        Fruit::name = "Apple";
     } 
 };
 class Banana : public Fruit{
@@ -27,17 +27,17 @@ public:
         name ="banana";
         colour = "yellow" ;
      }
-    //Banana(string c):Fruit(m_banana,c){ } 
-     class GrannySmith : public Apple{
-    protected: string GrannySmith_name = "Granny Smith apple"; 
-    string Gr_colour = "green"; 
-    public: GrannySmith():Apple(name, colour){
+};
+
+class GrannySmith : public Apple{
+
+    public: GrannySmith():Apple(colour){
         name = "Granny Smith apple"; 
         colour = "green";
     } 
      
 }; 
-int main(int argc, const char char* argv[]){
+int main(int argc, const char** argv){
     Apple a("red");
     //Banana b; 
     //GrannySmith c;
