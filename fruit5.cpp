@@ -8,17 +8,15 @@ protected:
     string color;
 public:
     Fruit(string n, string c) : name(n), color(c) {}
-    string getname() const {
+    string getName() const {
           return name;
     }
-    string getcolor() const {
+    string getColor() const {
              return color;
     }
 };
 
 class Apple : public Fruit {
-protected:
-    
 public:
     Apple(string color) : Fruit("apple", color) {}
 };
@@ -30,7 +28,7 @@ public:
 class GrannySmith : public Apple {
 public:
     GrannySmith() :Apple("green") {
-        name= "Granny Smith apple";
+        name = "Granny Smith apple";
 
     }
 };
@@ -39,8 +37,8 @@ int main(int argc, const char** argv){
     Apple a("red");
     Banana b;
     GrannySmith c;
-    cout << "My " << a.getname() << " is " << a.getcolor() << endl;
-    cout << "My " << b.getname() << " is " << b.getcolor() << endl;
-    cout << "My " << c.getname() << " is " << c.getcolor() << endl;
+    cout << "My " << a.getName() << " is " << a.getColor() << endl;
+    cout << "My " << b.getName() << " is " << b.getColor() << endl;
+    cout << "My " << c.getName() << " is " << c.getColor() << endl;
     return 0;
 }

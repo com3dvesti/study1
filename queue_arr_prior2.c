@@ -34,9 +34,33 @@ void insert(int pr, int data){
         printf("%s \n", "Queue is full");
         return;
     }else{
+        int idx = tail++%SZ;
+        //Node *tmp = arr[idx];
+        arr[idx]=node;
+        current_el++;
+    }
+}
+
+
+Node* remove_(){
+    if(current_el == 0){
+        return NULL;
+    }else{
         int i = 0;
         int idx = 0;
         Node *tmp;
+        Node* tmmp = 0;
+        int flag;
+
+        for(int k =0; i<SZ-1; ++i){
+            for(int z=0; z<SZ-i-1;++z){
+                if(arr[z]->pr>arr[z+1]->pr)
+                    tmmp=arr[z];
+                else
+                    tmmp=arr[z+1];
+            }
+        }
+        int pr = tmmp->pr;
         for(i =head; i<tail; ++i){
             idx = i % SZ;
             if(arr[idx]->pr>pr)
@@ -53,19 +77,9 @@ void insert(int pr, int data){
             arr[flag] = tmp;
             i++;
         }
-        arr[flag]=node;
-        current_el++;
-        tail++;
-    }
-}
-
-Node* remove_(){
-    if(current_el == 0){
-        return NULL;
-    }else{
-        int idx = head++%SZ;
-        Node *tmp = arr[idx];
-        arr[idx]=NULL;
+        tmp = arr[flag];
+        arr[flag]=NULL;
+        tail--;
         current_el--;
         return tmp;
     }
@@ -81,6 +95,9 @@ void print_queue(){
     }
     printf(" ] \n");
 }
+
+
+
 
 int main(int argc, const char **argv){
     init();

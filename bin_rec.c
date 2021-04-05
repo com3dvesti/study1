@@ -1,4 +1,4 @@
-#include <stdio.h>
+c#include <stdio.h>
 
 int bintoint(int x){
     int z;
@@ -7,7 +7,7 @@ int bintoint(int x){
     else return z;
     //printf("%d",x%2);
     z=(z*10)+x%2;
-     printf("%d");
+     printf("%d",z);
     return z;
 }
 
