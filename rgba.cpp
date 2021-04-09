@@ -15,10 +15,10 @@ public:
             m_green(0),
             m_blue(0),
             m_alpha(255){};
-    RGBA(uint8_t r,uint8_t g,uint8_t b,uint8_t alf): m_red(r),
-            m_green(g),
-            m_blue(b),
-            m_alpha(alf){};
+    RGBA(uint8_t r,uint8_t g,uint8_t b,uint8_t alf):    m_red(r),
+                                                        m_green(g),
+                                                        m_blue(b),
+                                                        m_alpha(alf){};
     void print_RGBA(){
         cout<<"m_red = "<<(int)m_red<<endl;
         cout<<"m_green = "<<(int)m_green<<endl;     

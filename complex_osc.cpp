@@ -3,7 +3,7 @@
 using namespace std;
 
 class oscillator {
-    complex <double> state ={1.,0.}, rotation polar(1.,.01);
+    complex <double> state ={1.,0.}, rotation = polar(1.,.01);
 public:
     double operator () (){
         return real(state *= rotation) ;

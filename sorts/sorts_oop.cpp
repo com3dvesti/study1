@@ -5,7 +5,8 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-class sortArray{
+class sortArray{]
+private:
     int n;
     int arr[n];
     void swap(int *x, int *y){
